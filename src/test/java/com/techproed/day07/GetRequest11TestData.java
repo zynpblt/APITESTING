@@ -41,6 +41,7 @@ public class GetRequest11TestData extends JsonPlaceHolderTestBase {
                         "title",equalTo(expectedData.get("title")),
                         "completed",equalTo(expectedData.get("completed")));
 
+
         //2.yontem
 
         JsonPath jsonPath=response.jsonPath();
