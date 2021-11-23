@@ -33,6 +33,7 @@ public class C02 extends HerokuAppTestBase {
                 assertThat().
                 statusCode(200).
                 contentType(ContentType.JSON);
+        //1.id nin 8 oldugumu test ettik
         List<Map<String,Integer>> responseBody=response.as(List.class);
         System.out.println(responseBody.get(0).values());
 

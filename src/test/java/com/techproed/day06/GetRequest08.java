@@ -21,7 +21,8 @@ public class GetRequest08 extends DummyTestBase {
 
         Response response=given().
                 accept("application/json").
-                spec(spec03).when().
+                spec(spec03).
+                when().
                 get("/{parametre1}");
 
         response.prettyPrint();
