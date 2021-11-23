@@ -10,6 +10,8 @@ import org.json.JSONObject;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.HashMap;
+
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.CoreMatchers.equalTo;
 
@@ -65,7 +67,11 @@ Dönen response un Status kodunun 201 ve response body nin aşağıdaki gibi old
         Assert.assertEquals(expectedRequest.getBoolean("completed"),json.getBoolean("completed"));
 
        //De Serialization
+        HashMap<String,Object> actualDataMap=response.as(HashMap.class);
 
+        Assert.assertEquals(expectedRequest.getString("title"),actualDataMap.get("title"));
+        Assert.assertEquals(expectedRequest.getInt("userId"),actualDataMap.get("userId"));
+        Assert.assertEquals(expectedRequest.getBoolean("completed"),actualDataMap.get("completed"));
 
     }
 }

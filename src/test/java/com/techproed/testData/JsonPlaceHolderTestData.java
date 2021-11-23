@@ -26,6 +26,19 @@ public class JsonPlaceHolderTestData {
        expectedData.put("completed", false);
        return  expectedData;
 
-
+   }
+   /*
+   {
+      "userId": 21,
+      "title": "Wash the dishes",
+      "completed": false
+     }
+    */
+   public JSONObject setUpPutData(){
+       JSONObject expectedRequest = new JSONObject();
+       expectedRequest.put("userId",21);
+       expectedRequest.put("title","Wash the dishes");
+       expectedRequest.put("completed",false);
+       return expectedRequest;
    }
 }
